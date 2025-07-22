@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use("/api/v1", eventRoutes);
 
 // Health check endpoint
-app.get("/api/health", (req, res) => {
+app.get("/api/v1/health", (req, res) => {
   res.status(200).json({ status: "OK" });
 });
 
