@@ -35,8 +35,9 @@ npm install
 Create a `.env` file in the root directory with the following content:
 
 ```
-MONGODB_URI=<your-mongodb-connection-string>
+MONGODB_URI=mongodb+srv://mini-event-scheduler:aaoIfKZDfvEysLTC@cluster0.drxhi2b.mongodb.net/event-scheduler?retryWrites=true&w=majority&appName=Cluster0
 PORT=3001
+NODE_ENV=development
 ```
 
 Replace `<your-mongodb-connection-string>` with your MongoDB URI.
@@ -75,7 +76,7 @@ All endpoints are prefixed with `/api/v1`.
 
 ### Health Check
 
-- **GET** `/api/health`
+- **GET** `/api/v1/health`
   - **Response:** `{ "status": "OK" }`
 
 ---
@@ -159,6 +160,6 @@ All endpoints are prefixed with `/api/v1`.
 
 ## Deployment
 
-This project is ready for deployment on [Vercel](https://event-scheduler-server-2x3q.vercel.app/api/health) using the provided `vercel.json` configuration.
+This project is ready for deployment on [Vercel](https://event-scheduler-server-2x3q.vercel.app/api/v1/health) using the provided `vercel.json` configuration.
 
 ---
